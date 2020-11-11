@@ -1,6 +1,10 @@
 # Getting Started with Terraform
 
-Terraform is the most popular tool for defining and provisioning infrastructure as code (IaC).
+Terraform is the most popular language for defining and provisioning infrastructure as code (IaC). As a demonstration of the ease of use of Terraform, the following guide will show you how to:
+
+* Set up and configure Terraform
+* Use Terraform to create a Docker container running a web server
+* Destroy the created resource when no longer needed
 
 ## Prerequisites for this example
 
@@ -11,7 +15,7 @@ Terraform is the most popular tool for defining and provisioning infrastructure 
 
 For this example, we recommend that you create a new directory on your local machine and create Terraform configuration code inside of it.
 
-*Note*: The examples below assume a Mac/Linux operating environment
+*Note*: The examples below assume a Mac or Linux operating environment
 
 ```shell
 $ mkdir tfdemo
@@ -24,7 +28,7 @@ Next, create a file for your Terraform configuration code.
 $ touch main.tf
 ```
 
-Paste the following configuration into the file to tell Terraform to create a Docker container running the `nginx` web server:
+Paste the following configuration into the `main.tf` file to tell Terraform to create a Docker container running the `nginx` web server:
 
 ```hcl
 terraform {
@@ -51,19 +55,21 @@ resource "docker_image" "nginx" {
 }
 ```
 
-Initialize Terraform with the `init` command. The Docker provider for Terraform will be automatically installed, if required.
+Initialize Terraform with the `init` command.
 
 ```shell
 $ terraform init
 ```
 
-You shoud check the output of this command for any errors and follow the provided suggestions to fix them. If it ran successfully, you should see output similar to the below:
+You shoud check the output of this command for any errors and follow the provided suggestions to fix them. This command If it ran successfully, you should see output similar to the below:
 
 ```shell
 Initializing the backend...
 
 Initializing provider plugins...
-- Using previously-installed terraform-providers/docker v2.7.2
+- Finding latest version of terraform-providers/docker...
+- Installing terraform-providers/docker v2.7.2...
+- Installed terraform-providers/docker v2.7.2 (signed by HashiCorp)
 
 The following providers do not have any version constraints in configuration,
 so the latest version was installed.
