@@ -9,7 +9,8 @@ Terraform is the most popular tool for defining and provisioning infrastructure 
 
 ## Configure Terraform
 
-Most users find it easiest to create a new directory on their local machine and create Terraform configuration code inside of it.
+For this example, we recommend that you create a new directory on your local machine and create Terraform configuration code inside of it.
+
 *Note*: The examples below assume a Mac/Linux operating environment
 
 ```shell
