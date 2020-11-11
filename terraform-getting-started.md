@@ -63,7 +63,7 @@ $ terraform init
 
 You shoud check the output of this command for any errors and follow the provided suggestions to fix them. If it ran successfully, you should see output similar to the below:
 
-```shell
+```
 Initializing the backend...
 
 Initializing provider plugins...
@@ -100,7 +100,7 @@ $ terraform apply
 
 You will be shown a summary (or *plan*) of what actions will be taken based on the contents of your `main.tf` configuration file, and you will be prompted to continue by entering `yes` at the prompt. The command will take a few moments to run and will display a message like the below example indicating that the resource was created:
 
-```shell
+```
 An execution plan has been generated and is shown below.
 Resource actions are indicated with the following symbols:
   + create
