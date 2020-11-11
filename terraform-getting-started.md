@@ -61,7 +61,7 @@ Once your configuration file is ready, initialize your working Terraform directo
 $ terraform init
 ```
 
-You shoud check the output of this command for any errors and follow the provided suggestions to fix them. If it ran successfully, you should see output similar to the below:
+You shoud check the output of this command for any errors and follow the provided suggestions to fix them. If it ran successfully, the Docker provider will be installed and you should see output similar to below:
 
 ```
 Initializing the backend...
@@ -92,13 +92,13 @@ commands will detect it and remind you to do so if necessary.
 ```
 
 ## Create infrastructure
-You can now provision the resource you specified with the `apply` command:
+You can now provision the resource you specified by running the `apply` command:
 
 ```shell
 $ terraform apply
 ```
 
-You will be shown a summary (or *plan*) of what actions will be taken based on the contents of your `main.tf` configuration file, and you will be prompted to continue by entering `yes` at the prompt. The command will take a few moments to run and will display a message like the below example indicating that the resource was created:
+You will be shown a summary (or *plan*) of what actions will be taken based on the contents of your `main.tf` configuration file, and you will be prompted to continue by entering `yes` at the prompt. Terraform will display a message like the below example indicating that the resource was created:
 
 ```
 An execution plan has been generated and is shown below.
