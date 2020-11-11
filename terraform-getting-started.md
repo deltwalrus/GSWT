@@ -15,7 +15,7 @@ Terraform is the most popular language for defining and provisioning infrastruct
 
 For this example, we recommend that you create a new directory on your local machine and create Terraform configuration code inside of it.
 
-*Note*: The examples below assume a Mac or Linux operating environment
+*Note: The examples below assume a Mac or Linux operating environment*
 
 ```shell
 $ mkdir tfdemo
