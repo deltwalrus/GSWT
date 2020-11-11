@@ -6,7 +6,7 @@ Terraform is the most popular language for defining and provisioning infrastruct
 - Use Terraform to create a Docker container running a web server
 - Destroy the created resource when no longer needed
 
-## Prerequisites for this example
+## Prerequisites for this guide
 
 - Install [Docker Desktop](https://www.docker.com/products/docker-desktop) for your operating system
 - Download the [Terraform binary](https://www.terraform.io/downloads.html) for your operating system and ensure it resides within a directory in your system's `$PATH` *OR* follow the [instructions to install the appropriate Terraform package](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started) for your operating system 
