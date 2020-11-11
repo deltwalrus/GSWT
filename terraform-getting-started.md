@@ -1,10 +1,10 @@
 # Getting Started with Terraform
 
-Terraform is the most popular language for defining and provisioning infrastructure as code (IaC). As a demonstration of the ease of use of Terraform, the following guide will show you how to:
+Terraform is the most popular language for defining and provisioning infrastructure as code. As a demonstration of the ease of use of Terraform, the following guide will show you how to:
 
-* Set up and configure Terraform
-* Use Terraform to create a Docker container running a web server
-* Destroy the created resource when no longer needed
+- Set up and configure Terraform
+- Use Terraform to create a Docker container running a web server
+- Destroy the created resource when no longer needed
 
 ## Prerequisites for this example
 
@@ -13,16 +13,16 @@ Terraform is the most popular language for defining and provisioning infrastruct
 
 ## Configure Terraform
 
-For this example, we recommend that you create a new directory on your local machine and create Terraform configuration code inside of it.
+*Note: The examples below assume a Mac or Linux operating environment.*
 
-*Note: The examples below assume a Mac or Linux operating environment*
+For this example, we recommend that you create a new directory on your local machine and create Terraform configuration code inside of it:
 
 ```shell
 $ mkdir tfdemo
 $ cd tfdemo
 ```
 
-Next, create a file for your Terraform configuration code.
+Next, create a file for your Terraform configuration code:
 
 ```shell
 $ touch main.tf
@@ -55,13 +55,13 @@ resource "docker_image" "nginx" {
 }
 ```
 
-Initialize Terraform with the `init` command.
+Once your configuration file is ready, initialize your working Terraform directory with the `init` command to prepare it for use:
 
 ```shell
 $ terraform init
 ```
 
-You shoud check the output of this command for any errors and follow the provided suggestions to fix them. This command If it ran successfully, you should see output similar to the below:
+You shoud check the output of this command for any errors and follow the provided suggestions to fix them. If it ran successfully, you should see output similar to the below:
 
 ```shell
 Initializing the backend...
@@ -92,13 +92,13 @@ commands will detect it and remind you to do so if necessary.
 ```
 
 ## Create infrastructure
-Provision the resource with the `apply` command.
+You can now provision the resource you specified with the `apply` command:
 
 ```shell
 $ terraform apply
 ```
 
-You will be shown a summary (or plan) of what actions will be taken based on the contents of your `main.tf` configuration file, and you will be prompted to continue by entering `yes` at the prompt. The command will take a few moments to run and will display a message like the below example indicating that the resource was created:
+You will be shown a summary (or *plan*) of what actions will be taken based on the contents of your `main.tf` configuration file, and you will be prompted to continue by entering `yes` at the prompt. The command will take a few moments to run and will display a message like the below example indicating that the resource was created:
 
 ```shell
 An execution plan has been generated and is shown below.
@@ -172,7 +172,7 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
 ## Destroy infrastructure
 
-Finally, you can destroy the infrastructure with the `destroy` command.
+Finally, you can destroy infrastructure using the `destroy` command:
 
 ```shell
 $ terraform destroy
@@ -271,3 +271,11 @@ docker_image.nginx: Destruction complete after 0s
 
 Destroy complete! Resources: 2 destroyed.
 ```
+
+## Next steps
+
+This guide has demonstrated how to set up and use Terraform to create and destroy infrastructure on your local system.  Now that you have seen how Terraform uses infrastructure as code to manage a system's lifecycle, we recommend the following resources to help you learn more about how to extend Terraform's functionality into the cloud and beyond:
+
+- Our learning portal provides many [Terraform tutorials](https://learn.hashicorp.com/terraform) tailored to specific use-cases
+- The [Terraform documentation](https://www.terraform.io/docs/index.html) page offers a deeper dive into Terraform's features
+- You can find the latest news about all of our products at the [Hashicorp blog](https://www.hashicorp.com/blog)
