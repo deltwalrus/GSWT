@@ -43,7 +43,7 @@ provider "docker" {}
 
 resource "docker_container" "nginx" {
   image = docker_image.nginx.latest
-  name  = "training"
+  name  = "example"
   ports {
     internal = 80
     external = 80
