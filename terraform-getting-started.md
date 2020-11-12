@@ -1,6 +1,6 @@
 # Getting Started with Terraform
 
-Terraform is the most popular language for defining and provisioning infrastructure as code. As a demonstration of the purpose and capabilities of Terraform, the following guide will show you how to:
+Terraform is the most popular language for defining and provisioning infrastructure as code. As a demonstration of the purpose and capabilities of Terraform, this guide will show you how to:
 
 - Set up and configure Terraform
 - Use Terraform to create a Docker container running a web server
